@@ -2,27 +2,44 @@
   <head>
     <title>Exploring Hope</title>
   </head>
-  <body>
-    <h1> Quote of the Day </h1>
-    <div id  = "quoteDisplay">
+<body>
+
+<div class="navbar">
+  <a href="#home">Home</a>
+  
+  <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Stories
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="#">Public Stories</a>
+      <a href="#">Anonymous Stories</a>
     </div>
-    <button onclick = "newQuote()">Inspiration</button>
-    <div id="navbar">
-    <a href="#home" style = "color: black">Home </a>
-    <div class="dropdown">
-        <button class ="dropbtn">Stories <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="#publicstories" style = "color: black">Public Stories </a> 
-            <a href="#anonymousstories" style = "color: black">Anonymous Stories</a>
-            <!-- change the href = "" depending on repo names -->
-        </div>
-    </div> 
-    <a href="#videos" style = "color: black">Videos </a> 
-    <a href="#directory" style = "color: black">Directory </a> 
-    <a href="#contact" style = "color: black">Contact Us </a> 
+  </div> 
+  <a href="#videos">Videos</a>
+  <a href="#directory">Directory</a>
+  <a href="#contact">Contact Us</a>
+  
 </div>
-    
-    <script src = "javascript.js"></script>
-  </body>
-</html> 
+
+
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
+</script>
+</body>
+  </html> 
