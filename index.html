@@ -90,36 +90,61 @@ h2{
 
 /*DEF TEXT */
     #def {
+       background-color: black;
+        clear: left;
         text-align: center;
-        color: #575757;
-
+        vertical-align: middle;
+        overflow: auto;
+    }
+    .def-head{
+    	
+    	margin-top: 1%;
+    	font-size: 35px;
+        font-weight: 400;
+        color: white;
     }
     .def-text{
         font-size: 30px;
-        font-weight: 800;
-		width: 50%;
+		width: 90%;
         margin: auto;
         vertical-align: middle;
         text-align: center;
+        color: white;
     }
 
     .def-num{
         font-size: 15px;
         font-weight: 800;
     }
+    
+
+/*QUOTE*/
+	.parallax2{
+    	background-image: url("http://avante.biz/wp-content/uploads/Gradient-Wallpaper/Gradient-Wallpaper-021.jpg");
+        height: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        clear: left;
+		padding: 1em;
+		filter : alpha(opacity = 60);
+    }
+    
+	
 /* PHOTOS */
 	#photos{
-    	padding: 1em;
         background-color: #f2e6ff;
-        margin: 0;
         clear: left;
         text-align: center;
         vertical-align: middle;
-        display: block;
         overflow: auto;
-    
     }
-    
+    .photos-head{
+        margin-top: 1%;
+    	font-size: 35px;
+        font-weight: 400;
+    }
     .photos-text{
     	color: white;
         font-size: 25px;
@@ -129,17 +154,17 @@ h2{
     
     .sur1 {
     	float : left;
-	margin:20px;
+		margin:20px;
 
     }
     
     a:link {
-    text-decoration: none;
-    vertical-align: center;
-    text-align: center;
-    width: 75%;
-    margin: 10px;
-}
+        text-decoration: none;
+        vertical-align: center;
+        text-align: center;
+        width: 75%;
+        margin: 10px;
+    }
 
 </style>
 </head>
@@ -169,18 +194,26 @@ h2{
             </div>
          </div>
 
-		<div id = "def">
+		
     		<h2> Exploring </br> Hope</h2>
             
-    		<!-- <div class = "def-text"> (noun) </br> The action or practice of illegally transporting people from one country or area to another, typically for the purposes of forced labor or commercial sexual exploitation. </div> 
-            <div class = "def-num"> National Human Trafficking Resource Center : 1 (888) 373-7888</div>
-            -->
     		
-		</div>
 	</div>
     
+    <div id = "def"> 
+    	<div class = "def-head"> Human Trafficking: </div>
+   		<div class = "def-text"> (noun) </br> The action or practice of illegally transporting people from one country or area to another, typically for the purposes of forced labor or commercial sexual exploitation. </div> 
+        <div class = "def-num"> National Human Trafficking Resource Center : 1 (888) 373-7888</div>
+    </div>
+    
+    
+    <div class = "parallax2"> 
+    
+    <p>“Never doubt that a small group of thoughtful, committed citizens can change the world. Indeed, it is the only thing that ever has.” – Margaret Mead </p>
+    
+    </div>
     <div id = "photos">
-    	<h2> Articles </h2>
+    	<div class = "photos-head"> Articles </div>
         <div class = "photos-text">
         	<p> Photos</p>
         </div>
