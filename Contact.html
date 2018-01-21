@@ -10,8 +10,71 @@ body, html{
 	height: 100%;
     margin: 0;
 }
+/*DROPDOWN MENU */
+    .bar1, .bar2, .bar3 {
+      width: 20px;
+      height: 3px;
+      background-color: #333;
+      margin: 3px 0;
+      transition: 0.4s;
+	}
+    .dropbtn {
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0);
+        min-width: 100px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        text-align: center;
+    }
+
+    .dropdown-content a {
+        color: black;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown a:hover {background-color: rgba(255, 255, 255, 0.2)}
+
+    .show {display:block;}
+
 </style>
 <body bgcolor = "grey">
+<div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">
+
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div></button>
+
+            <div id="myDropdown" class="dropdown-content">
+              <a href=index.html>Home</a>
+              <a href=Public.html>Public Stories</a>
+              <a href=AnonStories.html>Anonymous Stories</a>
+              <a href=Directory.html>Directory</a>
+              <a href=Contact.html>Contact Us</a>
+            </div>
+         </div>
+
 <font color="black" size=6>
 <img src="pic.png" width=100% height="300">
 <center>
@@ -66,5 +129,25 @@ body, html{
 </br>
 Call: +17024455891 || Email:exploringhopes@gmail.com
 </font>
+<script>
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+</script>
 </body>
 </html>
